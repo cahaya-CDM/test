@@ -64,6 +64,20 @@ class _ListMenuState extends State<ListMenu> {
           centerTitle: true,
           title: const Text('Menu Mie Gacoan Hari ini'),
         ),
+        drawer: Drawer(
+            child: ListView(
+          children: [
+            DrawerHeader(
+                // decoration: BoxDecoration(color: Colors.blue[900]),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: Image.network('https://upload.wikimedia.org/wikipedia/id/thumb/5/5c/LogoMieGacoan.png/480px-LogoMieGacoan.png', fit: BoxFit.cover,),
+                )),
+            ListTile(
+              leading: Text('Best Seller'),
+            )
+          ],
+        )),
         body: LayoutBuilder(builder: (context, constraints) {
           double width = constraints.maxWidth;
 
